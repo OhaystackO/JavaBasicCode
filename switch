@@ -1,0 +1,26 @@
+//案例：星期数
+//需求：键盘录入一个数，输出对应的星期数
+//分析：键盘录入（1）导包（2）创建对象（3）接收输入
+//		情况较多，使用switch语句解决
+
+import java.util.Scanner;
+
+public class WeekNumber{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("input a number(1-7):");
+		int week = sc.nextInt();
+		
+		switch(week){
+			case 1: System.out.println("Monday"); break;
+			case 2: System.out.println("Tuesday");break;
+			case 3: System.out.println("Wednesday");break;
+			case 4: System.out.println("Wednesday");break;
+			case 5: System.out.println("Friday");break;
+			case 6: System.out.println("Saturday");break;
+			case 7: System.out.println("Sunday");break;
+			default : System.out.println("illegal input");
+		}
+	}
+}
