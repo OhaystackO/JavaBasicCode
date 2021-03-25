@@ -1,0 +1,23 @@
+//案例：奇偶数
+//需求：从键盘接收一个数，用程序判断是奇数还是偶数，并在控制台输出
+//分析：接收键盘录入（1）导包（2）创建对象（3）接收数据
+//      if else进行判断
+
+import java.util.Scanner;
+
+public class Condition{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int input;
+		
+		System.out.println("input a number:");
+		input = sc.nextInt();
+		
+		if(input % 2 == 0){
+			System.out.println(input + " is an even number.");
+		}
+		else{
+			System.out.println(input + " is an odd number.");
+		}
+	}
+}
