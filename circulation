@@ -1,0 +1,69 @@
+//需求：循环语句（for，while，do-while）
+//		for:（1）循环打印hello world（2）1-1000水仙花数
+//		while:（1）循环打印5次hello world（2）珠穆朗玛峰
+//		do-while:（1）循环打印5次hello world（2）密码验证
+
+import java.util.Scanner;
+public class Circulation{
+	public static void main(String[] args){
+	//		  --------for--------	
+		System.out.println("------for------");
+		for(int i = 0; i < 5; ++i){
+			System.out.println("hello world!");
+		}
+		System.out.println("-------------");
+
+		int units, tens, hundreds;
+		int result = 1;
+		int count = 0;
+		for(int i = 1; i < 1000; ++i){
+			units = (i/1) % 10;
+			tens = (i/10) % 10;
+			hundreds = (i/100) % 10;
+			result = (units*units*units)+(tens*tens*tens)+(hundreds*hundreds*hundreds);	
+			
+			if(result == i){
+				System.out.println(i+" ");
+				count++;
+			}
+		}
+		System.out.println("count = "+count);
+		
+		//		--------while--------
+		System.out.println("------while------");
+		int j = 0;
+		while(j < 5){
+			System.out.println("Hello World!");
+			j++;
+		}
+		System.out.println("-------------");
+		
+		double height = 0.1;
+		int k =1;
+		while(height <= 8844430){
+			height *= 2;
+			k++;
+		}
+		System.out.println("k = " + k);
+		
+		//		------do-while------
+		System.out.println("------do-while------");
+		int m = 0;
+		do{
+			System.out.println("Hello World!");
+			m++;
+		}while(m<5);
+		System.out.println("-------------");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("设置四位数密码：");
+		int password = sc.nextInt();
+		int input;
+		
+		do{
+			System.out.println("输入密码：");
+			input = sc.nextInt();
+		}while(input != password);
+		System.out.println("欢迎使用***系统！");
+	}
+}
