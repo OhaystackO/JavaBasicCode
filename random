@@ -1,0 +1,46 @@
+//Random使用步骤：（1）导包（2）创建对象（3）生成随机数
+//案例：猜数字
+//需求：生成一个1-100的数字，用户猜数字，提示大小
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandNum{
+	public static void main(String[] args){
+		Random r = new Random();
+		//测试random
+		for(int i = 0; i < 5; ++i ){
+			int number = r.nextInt(10);
+			System.out.println(number);
+		}
+		System.out.println("--------");
+		
+		//猜数字案例实现
+		Scanner sc = new Scanner(System.in);
+		int randNum = r.nextInt(100)+1;
+		int input;
+		int count = 0;
+		int chance = 10;
+		
+		System.out.println("随机数准备好了，来猜猜是哪个数字吧：");
+		do{
+			input = sc.nextInt();
+			chance --;
+			if(input > randNum){
+				System.out.println("太大了，小一点：");
+			}
+			else if(input < randNum){
+				System.out.println("太小了，大一点：");
+			}
+			System.out.println("还有" + chance + "次机会");
+		}while(input != randNum && chance > 0);
+		
+		if(chance <= 0){
+			System.out.println("机会用完了，下次加油！");
+		}
+		else{
+			System.out.println("恭喜你猜中了");
+		}
+		
+	}
+}
