@@ -1,0 +1,49 @@
+/*
+* 带返回值方法的定义格式：
+*   public static 数据类型 方法名(参数){
+*       return 数据;
+*   }
+*
+*   调用格式：
+*       1.方法名(参数);
+*       2.数据类型 变量名 = 方法名(参数);
+*
+* 需求：
+*   1.定义一个方法，该方法接收一个参数，判断该数据是否是偶数，并返回真假值
+*   2.设计一个方法用于获取两个数中的较大值，数据来自于参数
+*/
+public class MethodWithReturn {
+    public static void main(String[] args) {
+        int a = 10;
+        boolean even = isEvenNumber(a);
+        System.out.println(even);
+        even = isEvenNumber(21);
+        System.out.println(even);
+        System.out.println("------");
+
+        int x = 11;
+        int y = 22;
+        int max = getMax(x,y);
+        System.out.println(max);
+        max = getMax(8,6);
+        System.out.println(max);
+    }
+
+    public static boolean isEvenNumber(int num){
+        if(num % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static int getMax(int num1,int num2){
+        if(num1 > num2){
+            return num1;
+        }
+        else{
+            return num2;
+        }
+    }
+}
