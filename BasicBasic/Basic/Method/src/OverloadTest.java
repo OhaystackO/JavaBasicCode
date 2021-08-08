@@ -1,0 +1,47 @@
+/*
+* 需求：
+* 使用方法重载思想设计比较两个整数是否相同的方法，
+* 兼容全整数类型（byte,short,int,long）
+*/
+public class OverloadTest {
+    public static void main(String[] args) {
+        int a = 1,b = 2;
+        byte c = 3,d = 3;
+        long e = 4,f = 5;
+
+        boolean result = isEqule(e,f);
+        System.out.println(result);
+    }
+
+    public static boolean isEqule(byte a, byte b) {
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isEqule(short a, short b) {
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isEqule(int a, int b){
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isEqule(long a, long b){
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

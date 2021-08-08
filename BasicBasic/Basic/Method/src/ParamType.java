@@ -1,0 +1,31 @@
+/*
+* 参数类型:
+*   1.基本类型
+*   2.引用类型
+*
+*/
+public class ParamType {
+    public static void main(String[] args) {
+        int num = 100;
+        System.out.println("before change:" + num);
+        change(num);
+        System.out.println("after change:" + num);
+//        1.基本数据类型的参数,形参改变不影响实参的值
+
+        System.out.println("- - - - - - - - - -");
+
+        int[] array = {1,2,3};
+        System.out.println("before change:" + array[1]);
+        change(array);
+        System.out.println("after change:" + array[1]);
+//        引用类型的参数，形参的改变影响实参的值
+    }
+
+    public static void change(int num){
+        num = 200;
+    }
+
+    public static void change(int[] arr){
+        arr[1] = 4;
+    }
+}

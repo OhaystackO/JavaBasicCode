@@ -1,0 +1,23 @@
+/*
+*需求：
+*   已知一个数组arr={19,28,37,46,50};
+*   用程序实现翻转交换数组元素，并输出到控制台
+*/
+public class FlipArray {
+    public static void main(String[] args) {
+        int[] src = {19,28,37,46,50};
+        int[] des = new int[src.length];
+
+        flip(src,des);
+
+        for(int j = 0; j < des.length; ++j){
+            System.out.println(des[j]);
+        }
+    }
+
+    public static void flip(int[] src,int[] des){
+        for(int i = 0; i <src.length; ++i){
+            des[des.length -1 - i] = src[i];
+        }
+    }
+}
